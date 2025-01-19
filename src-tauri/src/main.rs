@@ -2,7 +2,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 use serde::{Serialize, Deserialize};
 use tauri::{Emitter, Manager};
-use std::{thread, time::Duration};
+use std::{process::{Command, Stdio}, thread, time::Duration};
 use reqwest::blocking::get;
 
 #[derive(Debug, Serialize,Clone)]
@@ -28,6 +28,15 @@ fn main() {
                     thread::sleep(Duration::from_secs(5));
                 }
             });
+            
+            // // Pocket Base configurations
+            // Command::new("./pocketbase/pocketbase")
+            //     .arg("serve")
+            //     .arg("--http=127.0.0.1:8090") // Change port if needed
+            //     .stdout(Stdio::inherit())
+            //     .stderr(Stdio::inherit())
+            //     .spawn()
+            //     .expect("Failed to start PocketBase server");
 
             Ok(())
         })

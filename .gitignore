@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Pockebase directory
+db
+db/pocketbase*
+db/pb_data/
+db/pb_backups/
