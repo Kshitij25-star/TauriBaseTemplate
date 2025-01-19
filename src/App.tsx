@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 import "./index.css"
-
+// Shadcn Component 
 import { Input } from "./components/ui/input";
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
 import {
@@ -11,8 +11,12 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
+import { NetworkStatus } from "./components/ui/sys/networkstatus";
+
+
 
 function App() {
+
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
 
@@ -23,6 +27,9 @@ function App() {
 
   return (
     <main className="container">
+      
+      <NetworkStatus />
+
       <h1>Welcome to Tauri + React</h1>
 
       <div className="row">
