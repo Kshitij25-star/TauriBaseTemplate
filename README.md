@@ -13,3 +13,6 @@ This template should help get you started developing with Tauri, React and Types
     pnpm build 
 #### Tailwind css output file watch
     npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch
+#### Shadcn to install for React
+    https://ui.shadcn.com/docs/installation/manual
+
