@@ -41,3 +41,17 @@ Start pocketbase server using below command:
                   \
                    +--> [Tauri Backend for Printing, File Access]
 ```
+
+
+#### PNPM 
+    where pnpm
+    C:\Users\ACER\AppData\Roaming\npm\pnpm
+    C:\Users\ACER\AppData\Roaming\npm\pnpm.cmd
+    export PATH=$PATH:/c/Users/ACER/AppData/Roaming/npm
+    pnpm -v
+
+Permanently 
+    permanently add it to your .bash_profile:
+
+    echo 'export PATH=$PATH:/c/Users/ACER/AppData/Roaming/npm' >> ~/.bash_profile
+    source ~/.bash_profile
